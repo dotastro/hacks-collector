@@ -6,9 +6,10 @@ import six
 import yaml
 import requests
 
-REQUIRED = ()
-OPTIONAL = ('link', 'another')
-URLS = ('link', 'another')
+REQUIRED = ('title', 'creators', 'description')
+OPTIONAL = ('source-url', 'live-url', 'doi', 'images',
+            'contact-email', 'contact-github')
+URLS = ('source-url', 'live-url')
 
 status = 0
 
@@ -36,7 +37,7 @@ for yaml_file in yaml_files:
     except Exception:
         errors.append("Failed to parse {0}".format(yaml_file))
         continue
-        
+
     if entry is None:
         errors.append("Empty file: {0}".format(yaml_file))
         continue
