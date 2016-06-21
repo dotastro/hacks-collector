@@ -25,8 +25,9 @@ Each hack should be described by a file that looks like this:
 The file format is called YAML, but you don't need to worry if you don't know
 this - we explain all the details below.
 
-The ``title``, ``creators``, and ``description`` fields are always required,
-and the rest of the fields are optional. These are:
+The ``title``, ``creators``, and ``description`` fields are always required
+
+The following fields are optional:
 
 * ``source-url``: for code hacks, this is the URL or URLs to where the source
   code for the hack is stored - this can be for example a GitHub or BitBucket
