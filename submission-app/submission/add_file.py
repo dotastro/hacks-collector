@@ -1,3 +1,6 @@
+from github import Github, InputGitTreeElement
+
+
 def add_file(repo, branch, message, filename, contents):
     """
     Add a new file to a new branch in a GitHub repo
