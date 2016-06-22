@@ -1,7 +1,7 @@
 List of .Astronomy hacks
 ========================
 
-This repository is intended to contain information about all hacks that have
+This repository is intended to contain information about all hacks (coding or otherwise) that have
 been carried out as part of the .Astronomy meetings. Each meeting has a folder
 which in turn contains one file for each hack. Adding a file to this repository
 is easy, and we describe the file format and the steps to take to add a file
@@ -38,7 +38,7 @@ The following fields are optional:
   repository.
   
 * ``live-url``: when applicable, this is the URL or URLs for the 'finished' product,
-  for example a website or a video.
+  for example a website or a video link.
 
 * ``doi``: if you archive your hack on a service such as
   [Zenodo](https://zenodo.org) or [figshare](https://figshare.com) (and we
