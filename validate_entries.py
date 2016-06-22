@@ -9,7 +9,7 @@ import requests
 
 REQUIRED = ('title', 'creators', 'description')
 OPTIONAL = ('source-url', 'live-url', 'doi', 'images',
-            'contact-email', 'contact-github')
+            'contact-email', 'contact-github', 'orcid')
 URLS = ('source-url', 'live-url')
 
 status = 0
