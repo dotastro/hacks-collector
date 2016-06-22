@@ -1,0 +1,9 @@
+title: webcite
+creators:
+    - Becky Smethurst
+    - Lisa Ballard
+    - Demitri Muna
+description: This hack takes an ADS bibliographic code and plots a geographical web of citations for that paper. It finds the institutions of the first authors of papers which cite the given paper. You can also toggle to show the web for all the authors on the papers which cite the given paper. It uses leaflet to display the map data.  
+source-url: https://github.com/rjsmethurst/webcites_flask
+live-url: http://webcites.herokuapp.com
+images: https://github.com/rjsmethurst/rjsmethurst.github.io/blob/master/images/webcites.gif
