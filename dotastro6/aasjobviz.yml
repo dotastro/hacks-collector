@@ -1,0 +1,6 @@
+title: AAS Job Viz
+creators:
+  - Vanessa Moss
+description: A visualisation of the AAS job register using location to pin jobs on a map. Allows users to filter jobs by type and location. This project uses the Leaflet.js Javascript library.
+live-url: http://www.physics.usyd.edu.au/~vmoss/jobvis
+source-url: 
