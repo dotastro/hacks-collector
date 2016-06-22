@@ -79,3 +79,5 @@ Once you are happy with the .yml file describing your hack, you need to submit w
 The pull request will let the .Astronomy team know that you would like your hack added to this repo and then if everything is ok with your submitted .yml file and it passes our tests then we'll merge your changes.
 
 Ta Da! Your hack is now archived for the joy of future generations!
+
+![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
