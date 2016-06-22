@@ -7,3 +7,5 @@
 **Local Organisers:** Laura Trouille, Lucianne Walkowicz, Laura Whyte.
 
 We aim to host approximately 60 attendees for a three-day event conference all about astronomy online! This will include a series of talks, multiple open unconference sessions, and a full day hacking on awesome, innovative projects.
+
+[Official website](http://dotastronomy.com/events/six/)

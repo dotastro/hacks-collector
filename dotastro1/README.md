@@ -6,4 +6,6 @@
 
 **Local Organiser:** Robert Simpson.
 
-The first .Astronomy was a gathering of 30 people in Cardiff. Talks were fully scheduled, some were via video link. There was much discussion of social media, and many attendees were converted to Twitter during the event. T
+The first .Astronomy was a gathering of 30 people in Cardiff. Talks were fully scheduled, some were via video link. There was much discussion of social media, and many attendees were converted to Twitter during the event.
+
+[Official website](http://dotastronomy.com/events/one/)
