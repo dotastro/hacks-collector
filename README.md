@@ -80,4 +80,8 @@ The pull request will let the .Astronomy team know that you would like your hack
 
 Ta Da! Your hack is now archived for the joy of future generations!
 
+You can also add the dotastro shield badge to the README.md file of your hack's source code by including the following markdown code:
+
+    ![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
+
 ![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
