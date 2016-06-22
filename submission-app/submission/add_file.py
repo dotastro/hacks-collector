@@ -29,7 +29,7 @@ def add_file(repo, branch, message, filename, contents):
     return ref, commit
 
 
-YML_TEMPLATE="""
+YML_TEMPLATE = """
 title: {title}
 creators: {creators}
 description: {desc}

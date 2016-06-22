@@ -1,6 +1,6 @@
 import os
 import requests
-from urllib.parse import urlencode, parse_qs
+from urllib.parse import parse_qs
 
 from flask import Flask, request, send_from_directory, redirect, render_template
 from github import Github
@@ -19,19 +19,27 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return redirect(github_authorize)
+    return redirect(github_authorize())
 
 
 def github_authorize():
     data = {'client_id': CLIENT_ID,
             'scope': 'repo',
-            'redirect_uri': request.base_url + '/submit'}
+            'redirect_uri': request.base_url + 'submit'}
     pr = requests.Request('GET', GITHUB_AUTH_URL, params=data).prepare()
+
     return pr.url
+
 
 @app.route("/submit", methods=['GET'])
 def submit():
-    return render_template('form-validation.html', access_token=request.args['access_token'])
+    data = {'client_id': CLIENT_ID,
+            'client_secret': CLIENT_SECRET,
+            'code': request.args['code']}
+    res = requests.post(GITHUB_TOKEN_URL, data=data)
+    token = parse_qs(res.text)['access_token'][0]
+
+    return render_template('form-validation.html', access_token=token)
 
 
 @app.route("/assets/<path:filename>")
@@ -41,18 +49,13 @@ def assets(filename):
 
 @app.route("/create", methods=['POST'])
 def create_file():
-    data = {'client_id': CLIENT_ID,
-            'client_secret': CLIENT_SECRET,
-            'code': request.args['code']}
-    res = requests.post(GITHUB_TOKEN_URL, data=data)
-    token = parse_qs(res.text)['access_token'][0]
-
+    token = request.form['access_token']
     gh = Github(token)
 
     main_repo = gh.get_repo(HACKLIST_REPO)
     user_repo = gh.get_user().create_fork(main_repo)
 
-    title = request.form['title'].lower().replace(' ','-')
+    title = request.form['title'].lower().replace(' ', '-')
     branches = [b.name for b in user_repo.get_branches()]
     newbranchname = title
     if newbranchname in branches:
