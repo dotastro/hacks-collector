@@ -1,0 +1,8 @@
+title: Cosmology Calculator OS X widget
+creators:
+    - Brooke Simmons
+    - Stuart Lowe
+    - Kevin Schawinski
+    - Julie Steele
+description: A port of Ned Wright's Cosmology Calculator to an OS X widget.
+live-url: https://s3-eu-west-1.amazonaws.com/dotastro/cosmocalc.zip
