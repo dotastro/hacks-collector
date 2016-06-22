@@ -7,6 +7,14 @@ which in turn contains one file for each hack. Adding a file to this repository
 is easy, and we describe the file format and the steps to take to add a file
 below.
 
+Submitting a hack the easy way
+------------------------------
+Go to  [the hack submission web app](https://dotastronomy-hack-submitter.herokuapp.com) and enter the relevant details.  This will create a pull request from you automatically, which you can modify later if desired.
+
+
+Submitting a hack the hacky way
+-------------------------------
+
 First navigate to the correct conference folder e.g. [dotastro8](https://github.com/dotastro/hack-list/tree/master/dotastro8), then click on the "Create new file" button on the top right side of the page. 
 
 ![create-new-file-img](https://github.com/dotastro/hack-list/blob/master/images/create-new-file.png)
