@@ -13,6 +13,7 @@
   {% for creator in data.creators %}
   <li>{{creator}}</li>
   {% endfor %}
+</ul>
   <dl>
   {% for key, value in data.items() %}
       <dt>{{ key|e }}</dt>
@@ -21,3 +22,5 @@
   </dl>
 
 {% endfor%}
+</body>
+</html>

@@ -27,6 +27,9 @@ def runner():
         render_page_data(header, data, dirname)
     return
 
+def make_index():
+    return
+
 def render_markdown(readme):
     readme_file = open(readme, 'r')
     md = Markdown()
