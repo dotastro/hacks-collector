@@ -1,4 +1,4 @@
-from github import Github, InputGitTreeElement
+from github import InputGitTreeElement
 
 
 def add_file(repo, branch, message, filename, contents):
@@ -26,3 +26,33 @@ def add_file(repo, branch, message, filename, contents):
     tree = repo.create_git_tree(tree=tree_input)
     commit = repo.create_git_commit(tree=tree, message=message, parents=[git_commit])
     ref = repo.create_git_ref(ref="refs/heads/{0}".format(branch), sha=commit.sha)
+    return ref, commit
+
+
+YML_TEMPLATE="""
+title: {title}
+creators: {creators}
+description: {desc}
+source-url: {src}
+live-url: {live}
+contact-email : {email}
+doi: {doi}
+images: {images}
+orcid: {orcid}
+"""
+def make_file_contents(formdct):
+    title = formdct['title']
+    desc = formdct['description']
+    src = formdct['source_url']
+    live = formdct['live_url']
+    doi = formdct['doi']
+    email = formdct['email']
+    images = formdct['pic']
+
+    creators = [s.strip() for s in formdct['creators'].split(',')]
+    creators = '\n    - ' + '\n    - '.join(creators)
+
+    orcid = [s.strip() for s in formdct['orcid'].split(',')]
+    orcid = '\n    - ' + '\n    - '.join(orcid)
+
+    return YML_TEMPLATE.format(**locals())
