@@ -2,7 +2,7 @@ import os
 import uuid
 import requests
 
-from flask import Flask, request
+from flask import Flask, request, send_from_directory
 from github import Github
 
 GITHUB_AUTH_URL = 'https://github.com/login/oauth/authorize'
@@ -19,13 +19,15 @@ def github_authorize():
 
 @app.route("/")
 def index():
-    with open('submission_form/form-validation.html') as f:
-        return f.read()
+    return send_from_directory('form', 'form-validation.html')
 
-@app.route("/assets/")
-def asset():
-    with open('submission_form/' + requests.path) as f:
-        return f.read()
+@app.route("/assets/<path:filename>")
+def assets(filename):
+    return send_from_directory('form/assets', filename)
+
+# @app.route("/form/<path:filename>")
+# def getstatic(filename):
+#     return send_from_directory('form', filename)
 
 @app.route("/create", methods=['POST', 'GET'])
 def create():
