@@ -8,8 +8,6 @@ is easy, and we describe the file format and the steps to take to add a file
 below.
 
 
-First, you need to make a new `branch' to this repo by clicking on the "Branch:master" drop down button and type in a name for your branch. Now you've made a branch of this repo, you need to navigate into the right conference folder e.g. dotastro8 and create a new file describing your hack.
-
 
 The file format
 ---------------
@@ -26,7 +24,7 @@ Each hack should be described by a file that looks like this:
     doi: http://zenodo.org/1029812
     images: hack1.jpg
     
-This format is provided in the template.yaml file in this repo, you can create a file like this for your hack and submit a pull-request. The file format is called YAML, but you don't need to worry if you don't know
+This format is provided in the [template.yaml](https://github.com/dotastro/hack-list/blob/master/template.yaml) file in this repo, you can create a file like this for your hack and submit a pull-request. The file format is called YAML, but you don't need to worry if you don't know
 this or how to submit the pull-request - we explain all the details below.
 
 The ``title``, ``creators``, and ``description`` fields are always required
