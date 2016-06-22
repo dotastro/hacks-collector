@@ -1,5 +1,4 @@
-List of .Astronomy hacks
-========================
+# List of .Astronomy hacks
 
 This repository is intended to contain information about all hacks (coding or otherwise) that have
 been carried out as part of the .Astronomy meetings. Each meeting has a folder
@@ -7,20 +6,24 @@ which in turn contains one file for each hack. Adding a file to this repository
 is easy, and we describe the file format and the steps to take to add a file
 below.
 
-Submitting a hack the easy way
-------------------------------
-Go to  [the hack submission web app](https://dotastronomy-hack-submitter.herokuapp.com) and enter the relevant details.  This will create a pull request from you automatically, which you can modify later if desired.
+## Submitting a hack the easy way
 
+Go to [the hack submission web
+app](https://dotastronomy-hack-submitter.herokuapp.com) and enter the
+relevant details. This will create a pull request from you automatically,
+which you can modify later if desired (see the section on [Updating a hack](#updating))
 
-Submitting a hack the hacky way
--------------------------------
+## Submitting a hack via GitHub
 
-First navigate to the correct conference folder e.g. [dotastro8](https://github.com/dotastro/hack-list/tree/master/dotastro8), then click on the "Create new file" button on the top right side of the page. 
+###Creating the file
 
-![create-new-file-img](https://github.com/dotastro/hack-list/blob/master/images/create-new-file.png)
+First navigate to the correct conference folder e.g.
+[dotastro8](https://github.com/dotastro/hack-list/tree/master/dotastro8),
+then click on the "Create new file" button on the top right side of the page.
 
-The file format
----------------
+![create-new-file-img](images/create-new-file.png)
+
+### The file format
 
 Each hack should be described by a file that looks like this:
 
@@ -81,17 +84,45 @@ If you want to put a paragraph of text, e.g. for the description, you can do:
 That is, you should put a ``>`` on the first line then indent all the rest by a
 couple of spaces.
 
-Once you are happy with the .yml file describing your hack, scroll to the bottom of the page and select the "Create a new branch" option to start a pull request. 
+### Opening a pull request
 
-![create-new-branch](https://github.com/dotastro/hack-list/blob/master/images/create-new-branch.png)
+Once you are happy with the .yml file describing your hack, scroll to the
+bottom of the page and select the "Create a new branch" option to start a
+pull request.
 
-Make sure you give an appropriate commit message and then click on the big green "Propose new file" button. 
+![create-new-branch](images/create-new-branch.png)
 
-This will then set up a pull request for you and will let the .Astronomy team know that you would like your hack added to this repo and then if everything is ok with your submitted .yml file and it passes our tests then we'll merge your changes.
+Make sure you give an appropriate commit message and then click on the big
+green "Propose new file" button.
+
+This will then set up a pull request for you and will let the .Astronomy team
+know that you would like your hack added to this repo and then if everything
+is ok with your submitted .yml file and it passes our tests then we'll merge
+your changes.
 
 Ta Da! Your hack is now archived for the joy of future generations!
 
-You can also add the dotastro shield badge to the README.md file of your hack's source code by including the following markdown code:
+### <a name="updating"></a>Updating a hack
+
+Whether you submit a hack via the web form or via GitHub, subsequent updates
+should be done via GitHub. Assuming that the hack entry you want to edit is
+inside the main [hack-list](http://github.com/dotastro/hack-list) repository,
+navigate to the folder for the relevant .Astronomy meeting, then click on the
+file you want to edit. Once the contents of the file show, click on the pen
+icon in the upper right to edit the file:
+
+![edit-file](images/edit-file.png)
+
+Once you have made the edits, scroll down to the bottom of the page, and then
+enter a commit message and select to create a new branch, optionally giving a
+name to the branch:
+
+![edit-branch](images/edit-branch.png)
+
+## Badge/Shield
+
+You can also add the dotastro shield badge to the README.md file of your
+hack's source code by including the following markdown code:
 
     ![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
 
