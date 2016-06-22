@@ -4,7 +4,7 @@ import requests
 from urllib.parse import urlencode, parse_qs
 
 from flask import Flask, request, send_from_directory, redirect
-from github import Github
+from github import Github, GithubException
 
 GITHUB_AUTH_URL = 'https://github.com/login/oauth/authorize'
 GITHUB_TOKEN_URL = 'https://github.com/login/oauth/access_token'
@@ -29,6 +29,7 @@ def assets(filename):
 @app.route("/create", methods=['POST'])
 def github_authorize():
     data = {'client_id': CLIENT_ID,
+            'scope': 'repo',
             'redirect_uri': request.base_url + '?' + urlencode(request.form)}
     pr = requests.Request('GET', GITHUB_AUTH_URL, params=data).prepare()
     return redirect(pr.url)
@@ -38,10 +39,16 @@ def create_post():
     data = {'client_id': CLIENT_ID,
             'client_secret': CLIENT_SECRET,
             'code': request.args['code']}
+    print(data)
     res = requests.post(GITHUB_TOKEN_URL, data=data)
     token = parse_qs(res.text)['access_token'][0]
-    return token
+
     gh = Github(token)
+
+    user_repo = gh.get_user().create_fork(gh.get_repo(HACKLIST_FULLREPO))
+    user_repo
+
+
     return str(request.args)
 
 if __name__ == "__main__":
