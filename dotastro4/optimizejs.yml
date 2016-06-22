@@ -1,6 +1,0 @@
-title: Optimize.js
-creators:
-    - Dan Foreman-Mackay
-description: A tool for robust numerical optimization running right in your browser
-source-url: https://github.com/dfm/optimize.js
-live-url: http://dan.iel.fm/optimize.js/examples/gaussfit/
