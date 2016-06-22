@@ -26,7 +26,7 @@ Each hack should be described by a file that looks like this:
     doi: http://zenodo.org/1029812
     images: hack1.jpg
     
-This format is provided in the [template.yaml](https://github.com/dotastro/hack-list/blob/master/template.yaml) file in this repo. The file format is called YAML, but you don't need to worry if you don't know
+This format is provided in the [template.yml](https://github.com/dotastro/hack-list/blob/master/template.yml) file in this repo. The file format is called YAML, but you don't need to worry if you don't know
 this or how to submit the pull-request - we explain all the details below.
 
 The ``title``, ``creators``, and ``description`` fields are always required
