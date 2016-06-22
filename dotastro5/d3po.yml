@@ -1,0 +1,13 @@
+title: D3PO
+creators:
+    - Adrian Price-Whelan
+    - Josh Peek
+    - Chris Beaumont
+    - Elisabeth Newton
+    - Michelle Borkin
+description: >
+  D3PO is a project designed to allow an astronomer, with no specialized data
+  visualization skills, to make an interactive, publication-quality figure
+  that has staged builds and linked brushing across plots.
+source-url: https://github.com/adrn/d3po
+live-url: http://www.d3po.org/
