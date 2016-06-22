@@ -51,6 +51,8 @@ def render_page_data(header, data, dirname):
     output_from_parsed_template = template.render(header=header, pages=data, event=dirname )
     output_from_parsed_template.replace("–", " ")
 
+    if not os.path.isdir(OUTPUT_DIR):
+        os.mkdir(OUTPUT_DIR)
     with open(os.path.join(OUTPUT_DIR, dirname) + ".html", "w") as fh:
         fh.write(output_from_parsed_template)
 

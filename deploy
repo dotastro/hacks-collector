@@ -57,6 +57,8 @@ then
         exit;
     fi
 
+    exit;
+
     # remove the old $GH_PAGESBRANCH branch
     OUTPUT=`git branch -D $GH_PAGESBRANCH`
     if [[ $OUTPUT == *fatal* ]]
