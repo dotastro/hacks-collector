@@ -9,6 +9,8 @@ below.
 
 First navigate to the correct conference folder e.g. [dotastro8](https://github.com/dotastro/hack-list/tree/master/dotastro8), then click on the "Create new file" button on the top right side of the page. 
 
+![create-new-file-img](https://github.com/dotastro/hack-list/blob/master/images/create-new-file.png)
+
 The file format
 ---------------
 
