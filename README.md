@@ -22,8 +22,8 @@ Each hack should be described by a file that looks like this:
     doi: http://zenodo.org/1029812
     images: hack1.jpg
     
-The file format is called YAML, but you don't need to worry if you don't know
-this - we explain all the details below.
+This format is provided in the template.yaml file in this repo, you can create a file like this for your hack and submit a pull-request. The file format is called YAML, but you don't need to worry if you don't know
+this or how to submit the pull-request - we explain all the details below.
 
 The ``title``, ``creators``, and ``description`` fields are always required
 
