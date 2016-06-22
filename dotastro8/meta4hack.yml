@@ -5,8 +5,8 @@ creators:
     - Daina Bouquin
     - Tom Robitaille
 description: Metadata on a hack about metadata on hacks.  I.e., the submission form for this hack list.
-source-url: https://github.com/dotastro/hack-list/tree/submission-app
-live-url: TBD
+source-url: https://github.com/dotastro/hack-list-submission-app
+live-url: https://dotastronomy-hack-submitter.herokuapp.com
 contact-email : erik.tollerud@gmail.com
 doi: N/A
 images: 
