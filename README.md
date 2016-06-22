@@ -7,6 +7,8 @@ which in turn contains one file for each hack. Adding a file to this repository
 is easy, and we describe the file format and the steps to take to add a file
 below.
 
+
+
 The file format
 ---------------
 
@@ -22,7 +24,7 @@ Each hack should be described by a file that looks like this:
     doi: http://zenodo.org/1029812
     images: hack1.jpg
     
-This format is provided in the template.yaml file in this repo, you can create a file like this for your hack and submit a pull-request. The file format is called YAML, but you don't need to worry if you don't know
+This format is provided in the [template.yaml](https://github.com/dotastro/hack-list/blob/master/template.yaml) file in this repo, you can create a file like this for your hack and submit a pull-request. The file format is called YAML, but you don't need to worry if you don't know
 this or how to submit the pull-request - we explain all the details below.
 
 The ``title``, ``creators``, and ``description`` fields are always required
@@ -68,3 +70,16 @@ If you want to put a paragraph of text, e.g. for the description, you can do:
       
 That is, you should put a ``>`` on the first line then indent all the rest by a
 couple of spaces.
+
+
+Once you are happy with the .yml file describing your hack, you need to submit what's called a `pull request', by clicking the "New pull request" button. From there you can follow the GitHub instructions [here](https://help.github.com/articles/creating-a-pull-request/)
+
+The pull request will let the .Astronomy team know that you would like your hack added to this repo and then if everything is ok with your submitted .yml file and it passes our tests then we'll merge your changes.
+
+Ta Da! Your hack is now archived for the joy of future generations!
+
+You can also add the dotastro shield badge to the README.md file of your hack's source code by including the following markdown code:
+
+    ![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
+
+![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
