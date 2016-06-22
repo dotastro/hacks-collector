@@ -8,7 +8,7 @@ import logging
 
 DATA_DIRS = ['dotastro1','dotastro2','dotastro3','dotastro4','dotastro5','dotastro6','dotastro7','dotastro8']
 
-OUTPUT_DIR = 'public'
+OUTPUT_DIR = 'html'
 
 README_NAME = 'README.md'
 
