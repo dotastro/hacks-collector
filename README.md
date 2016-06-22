@@ -71,7 +71,11 @@ If you want to put a paragraph of text, e.g. for the description, you can do:
 That is, you should put a ``>`` on the first line then indent all the rest by a
 couple of spaces.
 
-Once you are happy with the .yml file describing your hack, scroll to the bottom of the page and select the "Create a new branch" option to start a pull request. Make sure you give an appropriate commit message and then click on the big green "Propose new file" button. 
+Once you are happy with the .yml file describing your hack, scroll to the bottom of the page and select the "Create a new branch" option to start a pull request. 
+
+![create-new-branch](https://github.com/dotastro/hack-list/blob/master/images/create-new-branch.png)
+
+Make sure you give an appropriate commit message and then click on the big green "Propose new file" button. 
 
 This will then set up a pull request for you and will let the .Astronomy team know that you would like your hack added to this repo and then if everything is ok with your submitted .yml file and it passes our tests then we'll merge your changes.
 
