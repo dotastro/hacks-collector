@@ -7,6 +7,10 @@ which in turn contains one file for each hack. Adding a file to this repository
 is easy, and we describe the file format and the steps to take to add a file
 below.
 
+
+First, you need to make a new `branch' to this repo by clicking on the "Branch:master" drop down button and type in a name for your branch. Now you've made a branch of this repo, you need to navigate into the right conference folder e.g. dotastro8 and create a new file describing your hack.
+
+
 The file format
 ---------------
 
@@ -68,3 +72,10 @@ If you want to put a paragraph of text, e.g. for the description, you can do:
       
 That is, you should put a ``>`` on the first line then indent all the rest by a
 couple of spaces.
+
+
+Once you are happy with the .yml file describing your hack, you need to submit what's called a `pull request', by clicking the "New pull request" button. From there you can follow the GitHub instructions [here](https://help.github.com/articles/creating-a-pull-request/)
+
+The pull request will let the .Astronomy team know that you would like your hack added to this repo and then if everything is ok with your submitted .yml file and it passes our tests then we'll merge your changes.
+
+Ta Da! Your hack is now archived for the joy of future generations!
