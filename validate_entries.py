@@ -63,7 +63,9 @@ for yaml_file in yaml_files:
     for keyword in URLS:
         if keyword in entry:
             value = entry[keyword]
-            if isinstance(value, six.string_types):
+            if value is None:
+                pass
+            elif isinstance(value, six.string_types):
                 urls.append(value)
             else:  # list of links
                 for link in value:
