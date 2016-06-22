@@ -1,5 +1,4 @@
 import os
-import uuid
 import requests
 from urllib.parse import urlencode, parse_qs
 
@@ -74,4 +73,5 @@ def create_file():
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
-    app.run(debug=True, port=port)
+    debug = bool(os.environ.get('DEBUG', False))
+    app.run(debug=debug, port=port)
