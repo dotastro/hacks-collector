@@ -1,11 +1,15 @@
 List of .Astronomy hacks
 ========================
 
-This repository is intended to contain information about all hacks that have
+This repository is intended to contain information about all hacks (coding or otherwise) that have
 been carried out as part of the .Astronomy meetings. Each meeting has a folder
 which in turn contains one file for each hack. Adding a file to this repository
 is easy, and we describe the file format and the steps to take to add a file
 below.
+
+First navigate to the correct conference folder e.g. [dotastro8](https://github.com/dotastro/hack-list/tree/master/dotastro8), then click on the "Create new file" button on the top right side of the page. 
+
+![create-new-file-img](https://github.com/dotastro/hack-list/blob/master/images/create-new-file.png)
 
 The file format
 ---------------
@@ -22,8 +26,8 @@ Each hack should be described by a file that looks like this:
     doi: http://zenodo.org/1029812
     images: hack1.jpg
     
-The file format is called YAML, but you don't need to worry if you don't know
-this - we explain all the details below.
+This format is provided in the [template.yml](https://github.com/dotastro/hack-list/blob/master/template.yml) file in this repo. The file format is called YAML, but you don't need to worry if you don't know
+this or how to submit the pull-request - we explain all the details below.
 
 The ``title``, ``creators``, and ``description`` fields are always required
 
@@ -34,7 +38,7 @@ The following fields are optional:
   repository.
   
 * ``live-url``: when applicable, this is the URL or URLs for the 'finished' product,
-  for example a website or a video.
+  for example a website or a video link.
 
 * ``doi``: if you archive your hack on a service such as
   [Zenodo](https://zenodo.org) or [figshare](https://figshare.com) (and we
@@ -68,3 +72,19 @@ If you want to put a paragraph of text, e.g. for the description, you can do:
       
 That is, you should put a ``>`` on the first line then indent all the rest by a
 couple of spaces.
+
+Once you are happy with the .yml file describing your hack, scroll to the bottom of the page and select the "Create a new branch" option to start a pull request. 
+
+![create-new-branch](https://github.com/dotastro/hack-list/blob/master/images/create-new-branch.png)
+
+Make sure you give an appropriate commit message and then click on the big green "Propose new file" button. 
+
+This will then set up a pull request for you and will let the .Astronomy team know that you would like your hack added to this repo and then if everything is ok with your submitted .yml file and it passes our tests then we'll merge your changes.
+
+Ta Da! Your hack is now archived for the joy of future generations!
+
+You can also add the dotastro shield badge to the README.md file of your hack's source code by including the following markdown code:
+
+    ![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
+
+![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
