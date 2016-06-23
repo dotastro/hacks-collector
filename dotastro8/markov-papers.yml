@@ -1,0 +1,12 @@
+
+title: Markov Papers
+creators: 
+    - Benjamin Pope
+description: This hack generates paper titles/abstracts with a Markov chain trained on real papers returned by any ADS search keywords.
+source-url: https://github.com/benjaminpope/markovpapers
+live-url: 
+contact-email : benjamin.pope@physics.ox.ac.uk
+doi: 
+images: 
+orcid: 
+    - orcid.org/0000-0003-2595-9114
