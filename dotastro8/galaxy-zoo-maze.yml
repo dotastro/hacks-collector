@@ -1,0 +1,17 @@
+
+title: Galaxy Zoo Maze
+creators: 
+    - James Gilbert
+    - Rebecca Beckman
+    - Ellen Schallig
+    - James Gilbert
+    - Becky Smethurst
+    - Marten Veldthuis
+description: Creates a responsive view of a Zooniverse subject and a QR code, then supports scanning and reacting to result compared to local data file.
+source-url: https://github.com/chrislintott/GZMaze
+live-url: gzmaze.herokuapp.com
+contact-email : chris.lintott@physics.ox.ac.uk
+doi: 
+images: galaxy-zoo-maze.png
+orcid: 
+    - 
