@@ -22,6 +22,7 @@ class SilentUndefined(Undefined):
 
 def runner():
     for dirname in DATA_DIRS:
+        make_index()
         header = render_markdown(os.path.join(dirname,README_NAME))
         data = collect_data(dirname)
         render_page_data(header, data, dirname)
@@ -32,7 +33,7 @@ def make_index():
         os.mkdir(OUTPUT_DIR)
     env = Environment(loader=FileSystemLoader('templates'))
     template = env.get_template('index.html')
-    output_from_parsed_template = template.render(header=header, pages=data, event=dirname )
+    output_from_parsed_template = template.render(pages=DATA_DIRS)
     with open(os.path.join(OUTPUT_DIR, "index.html"), "w") as fh:
         fh.write(output_from_parsed_template)
     return
