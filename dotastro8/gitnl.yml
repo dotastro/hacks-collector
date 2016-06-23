@@ -1,0 +1,8 @@
+title: GitNL
+creators:
+    - Brett Andrews
+    - Brian Cherinka
+    - Erik Tollerud
+description: Run Git commands using normal English sentences parsed with Google's natural language processor.
+source-url: http://github.com/eteq/gitnl
+doi: # TODO http://zenodo.org/
