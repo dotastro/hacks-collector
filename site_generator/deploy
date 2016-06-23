@@ -112,8 +112,8 @@ then
         if [ "$INTERACTIVE" = true ] ; then
             git push -f $GH_REMOTE $GH_PAGESBRANCH
         else
-            # we do this with nothing to stdout because otherwise it might reveal secret tokens
-            git push -f $GH_REMOTE $GH_PAGESBRANCH >/dev/null 2>&1
+            
+            git push -f $GH_REMOTE $GH_PAGESBRANCH
             echo "Push finished."
             git remote show $GH_REMOTE
             echo "testing"
