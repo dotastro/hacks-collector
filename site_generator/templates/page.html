@@ -6,7 +6,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
 <title>{{event}}</title>  <meta name="description" content="">
-  <meta name="author" content="Gomez Family website">
+  <meta name="author" content=".Astronomy Hacks Collector">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -32,17 +32,30 @@
 {% for data in pages %}
   <h2>{{data.title}}</h2>
   <p>{{data.description}}</p>
+  <h3>Creators</h3>
   <ul>
   {% for creator in data.creators %}
   <li>{{creator}}</li>
   {% endfor %}
 </ul>
-  <dl>
-  {% for key, value in data.items() %}
-      <dt>{{ key|e }}</dt>
-      <dd>{{ value|e }}</dd>
-  {% endfor %}
-  </dl>
+
+<h3>Other Information</h3>
+<ul>
+  {% if data['source-url'] %}
+  <li><a href="{{data['source-url']}}">Go to source</a></li>
+  {% endif %}
+  {% if data['live-url']%}
+  <li><a href="{{data['live-url']}}">Go to live</a></li>
+  {% endif %}
+  {% if data['doi']%}
+  <li><a href="{{data['doi']}}">DOI: {{data.doi}}</a></li>
+  {% endif %}
+</ul>
+
+{% for image in data.images %}
+<img src="{{image}}" /><br/>
+{% endfor %}
+
 <hr />
 {% endfor%}
 </body>
