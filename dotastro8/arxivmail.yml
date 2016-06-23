@@ -1,0 +1,7 @@
+title: The ArXiv Mailer
+creators:
+    - Dan Foreman-Mackey
+description: An app to modernize the formatting of the daily arXiv email.
+source-url: https://github.com/dfm/ArXivMailer
+live-url: http://arxiv.dfm.io
+images: arxivmail.jpg
