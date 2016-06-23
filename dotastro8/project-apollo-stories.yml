@@ -3,10 +3,14 @@ title: Project Apollo Stories
 creators: 
     - Arna Karick
     - Sam Vaughan
-description: A Zooniverse Project: Help astronomers to re-create the incredible stories from the Apollo missions. Takes user selected images from the Apollo Project Flickr image gallery and creates beautiful Timeline JS  interactive stories
+description: >
+  A Zooniverse Project: Help astronomers to re-create the incredible stories
+  from the Apollo missions. Takes user selected images from the Apollo
+  Project Flickr image gallery and creates beautiful Timeline JS interactive
+  stories
 source-url: https://github.com/samvaughan/ApolloProject
 live-url: https://www.zooniverse.org/projects/projectapollo-dotastro8/project-apollo-stories
-contact-email : arnakarick@gmail.com
+contact-email: arnakarick@gmail.com
 doi: 
 images: 
 orcid: 
