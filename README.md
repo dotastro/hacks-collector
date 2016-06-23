@@ -6,6 +6,8 @@ which in turn contains one file for each hack. Adding a file to this repository
 is easy, and we describe the file format and the steps to take to add a file
 below.
 
+To see a prettified web site listing these hacks, check out https://dotastro.github.io/hack-list/.
+
 ## Submitting a hack the easy way
 
 Go to [the hack submission web
