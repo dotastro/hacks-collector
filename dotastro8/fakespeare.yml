@@ -1,0 +1,7 @@
+title: Fakespeare
+creators:
+    - Ruth Angus
+    - Dan Foreman-Mackey
+description: A LSTM neural network trained on the corpus of all Shakespeare plays that can generate hilarious and nonsensical plays
+source-url: https://github.com/RuthAngus/Fakespeare
+contact-email: foreman.mackey@gmail.com, ruthangus@gmail.com
