@@ -4,7 +4,7 @@ python:
   - 3.5
 
 install:
-  - pip install six pyyaml requests markdown2 jinja2 pyyaml
+  - pip install six pyyaml requests markdown2 jinja2
 
 script:
   - python validate_entries.py
