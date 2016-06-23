@@ -22,20 +22,24 @@ class SilentUndefined(Undefined):
         return None
 
 def runner():
+    pages = []
     for dirname in glob.glob(DATA_DIR_PATTERN):
         if os.path.isdir(dirname):
             header = render_markdown(os.path.join(dirname, README_NAME))
             data = collect_data(dirname)
             render_page_data(header, data, dirname)
+            pages.append(dirname)
+    make_index(pages)
     return
 
-def make_index():
+def make_index(pages):
     if not os.path.isdir(OUTPUT_DIR):
         os.mkdir(OUTPUT_DIR)
     env = Environment(loader=TEMPLATE_LOADER)
     template = env.get_template('index.html')
-    output_from_parsed_template = template.render(header=header, pages=data, event=dirname )
+    output_from_parsed_template = template.render(pages=pages)
     with open(os.path.join(OUTPUT_DIR, "index.html"), "w") as fh:
+        print('Writing out', fh.name)
         fh.write(output_from_parsed_template)
     return
 
@@ -62,10 +66,10 @@ def render_page_data(header, data, dirname):
 
     if not os.path.isdir(OUTPUT_DIR):
         os.mkdir(OUTPUT_DIR)
-    with open(os.path.join(OUTPUT_DIR, dirname) + ".html", "w") as fh:
-        fh.write(output_from_parsed_template)
 
-    return
+    with open(os.path.join(OUTPUT_DIR, dirname) + ".html", "w") as fh:
+        print('Writing out', fh.name)
+        fh.write(output_from_parsed_template)
 
 if __name__ == '__main__':
     runner()
