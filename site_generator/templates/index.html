@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>.Astronomy Hack day projects</title>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+<title>.Astronomy Hack day projects</title>  <meta name="description" content="">
+  <meta name="author" content="Gomez Family website">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
 </head>
 <body>
+  <div class="section">
+    <div class="container">
+      <h1>.Astronomy Hacks Collector</h1>
+      <img src="http://dotastronomy.com/wp-content/uploads/2013/01/dotlogo_black.png" alt="dotastro logo" />
 
-  <ul>
-  {% for page in pages%}
-  <li><a href="{{ page }}.html"> {{ page }}</a></li>
-  {% endfor %}
-</ul>
+      <p>We have collated as many Hack Day projects from .Astronomy 2-7 that we could find. If you want to add your own project, follow the README instructions on <a href="https://github.com/dotastro/hack-list">Hack List GitHub repo</a>.</p>
+
+      <p>See what hacks were done each year:</p>
+      <ul>
+        {% for page in pages%}
+        <li><a href="{{ page }}.html">{{ page }}</li>
+        {% endfor %}
+      </ul>
+      <p>Ps. You'll find this hack on listed in here for .Astronomy 8 very soon. Its all very Meta.</p>
+    </div>
+  </div>
 </body>
 </html>

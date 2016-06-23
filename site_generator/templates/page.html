@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{event}}</title>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+<title>{{event}}</title>  <meta name="description" content="">
+  <meta name="author" content="Gomez Family website">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+
 </head>
 <body>
+  <div class="section">
+    <div class="container">
 {{header}}
 
 {% for data in pages %}
@@ -20,7 +43,7 @@
       <dd>{{ value|e }}</dd>
   {% endfor %}
   </dl>
-
+<hr />
 {% endfor%}
 </body>
 </html>
