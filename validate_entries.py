@@ -16,7 +16,7 @@ status = 0
 
 def check_link(url):
     try:
-        r = requests.get(url, timeout=5)
+        r = requests.get(url, timeout=30)
     except Exception:
         return False
     else:

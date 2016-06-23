@@ -6,10 +6,12 @@ creators:
     - Andy Newsam
     - Adam Avison
     - Philipp Plewa Call
-description: Users a Leap Motion device to alow a user to listen to a galaxy's spectra based on hand position.
+description: >
+  Users a Leap Motion device to alow a user to listen to a galaxy's spectra
+  based on hand position.
 source-url: https://github.com/jamieferguson94/bvi-sonification/tree/master
 live-url: 
-contact-email : coleman.krawczyk@port.ac.uk
+contact-email: coleman.krawczyk@port.ac.uk
 doi: 
 images: 
 orcid: 
