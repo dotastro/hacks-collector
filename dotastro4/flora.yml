@@ -4,7 +4,13 @@ creators:
     - Phil Marshall
     - Laura Whyte
 description: >
-  Flora is an attempt to enable quantitative measurements on images in a browser. In astronomy, we want to measure the position, size and brightness of various objects in our images - which in practice means fitting a model to them.
-  Flora uses Javascript and canvas to allow the user to point at an object they want to measure, and have a catalog entry of measurements returned. We use the astrojs library to handle FITS images (including calibration information in the header) and the transformations needed to turn pixel positions into "world" coordinates on the sky.
+  Flora is an attempt to enable quantitative measurements on images in a
+  browser. In astronomy, we want to measure the position, size and brightness
+  of various objects in our images - which in practice means fitting a model
+  to them. Flora uses Javascript and canvas to allow the user to point at an
+  object they want to measure, and have a catalog entry of measurements
+  returned. We use the astrojs library to handle FITS images (including
+  calibration information in the header) and the transformations needed to
+  turn pixel positions into "world" coordinates on the sky.
 live-url: http://ubret.s3.amazonaws.com/dotastro4/index.html#/examine/m101
 images: http://ubret.s3.amazonaws.com/dotastro4/images/Flora.png

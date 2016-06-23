@@ -3,7 +3,9 @@ creators:
     - Adam A. Miller
     - Brigitta Sipocz
     - Ashley Villar
-description: "A Zooniverse Project: Stellar Autopsies to classify the light curves of dying stars."
+description: >
+  A Zooniverse Project: Stellar Autopsies to classify the light curves of
+  dying stars.
 source-url: https://github.com/bsipocz/stellar-autopsies
 live-url: https://www.zooniverse.org/projects/adamamiller/stellar-autopsies
 contact-email:

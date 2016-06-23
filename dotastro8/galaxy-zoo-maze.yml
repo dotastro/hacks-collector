@@ -12,7 +12,7 @@ description: >
   supports scanning and reacting to result compared to local data file.
 source-url: https://github.com/chrislintott/GZMaze
 live-url: http://gzmaze.herokuapp.com
-contact-email : chris.lintott@physics.ox.ac.uk
+contact-email: chris.lintott@physics.ox.ac.uk
 doi: 
 images: galaxy-zoo-maze.png
 orcid: 

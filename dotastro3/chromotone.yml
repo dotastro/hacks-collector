@@ -5,6 +5,11 @@ creators:
     - Haley Gomez
     - Edward Gomez
 description: >
-  Exploring multiwavelength astronomy with sound. Each waveband has a pitch, the intensity/brightness in that waveband is represented by volume/loudness of the note. When you scan a mouse of an image Chromotone plays a chord with different components which correspond to the intensity at each pixel superposed.
-  The original version was written in Processing which is not particularly web friendly so this project aims to make a version which is lighter, more efficient and has added functionality.
+  Exploring multiwavelength astronomy with sound. Each waveband has a pitch,
+  the intensity/brightness in that waveband is represented by volume/loudness
+  of the note. When you scan a mouse of an image Chromotone plays a chord
+  with different components which correspond to the intensity at each pixel
+  superposed. The original version was written in Processing which is not
+  particularly web friendly so this project aims to make a version which is
+  lighter, more efficient and has added functionality.
 source-url: https://github.com/jonyardley/Chromotone

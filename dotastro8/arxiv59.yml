@@ -5,7 +5,7 @@ creators:
 description: Twitter bot that posts papers which missed the top-of-the-arXiv deadline by about a ~second
 source-url: https://github.com/andycasey/arxiv59
 live-url: https://twitter.com/arxiv59
-contact-email : andycasey@gmail.com
+contact-email: andycasey@gmail.com
 doi: 
 images: arxiv59.png
 orcid: 
