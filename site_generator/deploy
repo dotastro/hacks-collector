@@ -51,16 +51,15 @@ then
 
     # then convert YAML files to HTML
     OUTPUT=`python static_generator.py`
-    if [[ $OUTPUT == *ERROR* ]]
+    if [[ $OUTPUT != 0 ]]
     then
-        echo "Error converting notebook files to HTML!";
+        echo "Error generating static site, aborting deployment.";
         exit;
     fi
 
-
     # remove the old $GH_PAGESBRANCH branch
     OUTPUT=`git branch -D $GH_PAGESBRANCH`
-    if [[ $OUTPUT == *fatal* ]]
+    if [[ $OUTPUT != 0 ]]
     then
         echo "Error deleting branch '$GH_PAGESBRANCH'.";
         exit;
