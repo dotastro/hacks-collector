@@ -28,6 +28,12 @@ def runner():
     return
 
 def make_index():
+    if not os.path.isdir(OUTPUT_DIR):
+        os.mkdir(OUTPUT_DIR)
+    env = Environment(loader=FileSystemLoader('templates'))
+    template = env.get_template('index.html')
+    with open(os.path.join(OUTPUT_DIR, "index.html"), "w") as fh:
+        fh.write(output_from_parsed_template)
     return
 
 def render_markdown(readme):
