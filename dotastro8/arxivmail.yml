@@ -4,4 +4,5 @@ creators:
 description: An app to modernize the formatting of the daily arXiv email.
 source-url: https://github.com/dfm/ArXivMailer
 live-url: http://arxiv.dfm.io
+contact-email: foreman.mackey@gmail.com
 images: arxivmail.jpg
