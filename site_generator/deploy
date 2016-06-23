@@ -115,6 +115,8 @@ then
             # we do this with nothing to stdout because otherwise it might reveal secret tokens
             git push -f $GH_REMOTE $GH_PAGESBRANCH >/dev/null 2>&1
             echo "Push finished."
+            git remote show $GH_REMOTE
+            echo "testing"
         fi
 
         git checkout -f $CURRENT_BRANCH_NAME
