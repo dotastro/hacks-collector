@@ -12,6 +12,8 @@ OUTPUT_DIR = 'html'
 
 README_NAME = 'README.md'
 
+TEMPLATE_LOADER = FileSystemLoader('site_generator/templates')
+
 class SilentUndefined(Undefined):
     '''
     Dont break pageloads because vars arent there!
@@ -30,7 +32,7 @@ def runner():
 def make_index():
     if not os.path.isdir(OUTPUT_DIR):
         os.mkdir(OUTPUT_DIR)
-    env = Environment(loader=FileSystemLoader('templates'))
+    env = Environment(loader=TEMPLATE_LOADER)
     template = env.get_template('index.html')
     output_from_parsed_template = template.render(header=header, pages=data, event=dirname )
     with open(os.path.join(OUTPUT_DIR, "index.html"), "w") as fh:
@@ -53,7 +55,7 @@ def collect_data(folder_name):
     return data
 
 def render_page_data(header, data, dirname):
-    env = Environment(loader=FileSystemLoader('templates'))
+    env = Environment(loader=TEMPLATE_LOADER)
     template = env.get_template('page.html')
     output_from_parsed_template = template.render(header=header, pages=data, event=dirname )
     output_from_parsed_template.replace("–", " ")
