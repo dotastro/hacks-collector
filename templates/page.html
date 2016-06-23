@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{event}}</title>
+</head>
+<body>
+{{header}}
+
+{% for data in pages %}
+  <h2>{{data.title}}</h2>
+  <p>{{data.description}}</p>
+  <ul>
+  {% for creator in data.creators %}
+  <li>{{creator}}</li>
+  {% endfor %}
+</ul>
+  <dl>
+  {% for key, value in data.items() %}
+      <dt>{{ key|e }}</dt>
+      <dd>{{ value|e }}</dd>
+  {% endfor %}
+  </dl>
+
+{% endfor%}
+</body>
+</html>
