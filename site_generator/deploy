@@ -69,7 +69,7 @@ then
     git checkout --orphan $GH_PAGESBRANCH
 
     # Copy the built files to a tmp location
-    mv html _tmp
+    mv site_generator/html _tmp
 
     # This will delete all of the git-managed files here
     git rm -rf .

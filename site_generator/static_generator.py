@@ -6,11 +6,10 @@ from markdown2 import Markdown
 import logging
 
 
-DATA_DIRS = ['dotastro1','dotastro2','dotastro3','dotastro4','dotastro5','dotastro6','dotastro7','dotastro8']
-
-OUTPUT_DIR = 'html'
-
+DATA_DIR_PATTERN = 'dotastro*'
 README_NAME = 'README.md'
+
+OUTPUT_DIR = 'site_generator/html'
 
 TEMPLATE_LOADER = FileSystemLoader('site_generator/templates')
 
@@ -23,10 +22,11 @@ class SilentUndefined(Undefined):
         return None
 
 def runner():
-    for dirname in DATA_DIRS:
-        header = render_markdown(os.path.join(dirname,README_NAME))
-        data = collect_data(dirname)
-        render_page_data(header, data, dirname)
+    for dirname in glob.glob(DATA_DIR_PATTERN):
+        if os.path.isdir(dirname):
+            header = render_markdown(os.path.join(dirname, README_NAME))
+            data = collect_data(dirname)
+            render_page_data(header, data, dirname)
     return
 
 def make_index():
