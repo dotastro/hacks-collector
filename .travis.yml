@@ -12,7 +12,6 @@ script:
 deploy:
     provider: script
     script: ./travis_deploy
-    skip_cleanup: true
     on:
         repo: dotastro/hack-list
         branch: master
