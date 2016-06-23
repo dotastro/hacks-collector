@@ -50,20 +50,18 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
 
     # then convert YAML files to HTML
-    OUTPUT=`python static_generator.py`
-    if [[ $OUTPUT == *ERROR* ]]
+    OUTPUT=`python site_generator/static_generator.py`
+    if [[ $? != 0 ]]
     then
-        echo "Error converting notebook files to HTML!";
+        echo "Error generating static site, aborting deployment.";
         exit;
     fi
 
-
     # remove the old $GH_PAGESBRANCH branch
     OUTPUT=`git branch -D $GH_PAGESBRANCH`
-    if [[ $OUTPUT == *fatal* ]]
+    if [[ $? != 0 ]]
     then
-        echo "Error deleting branch '$GH_PAGESBRANCH'.";
-        exit;
+        echo "Error deleting branch '$GH_PAGESBRANCH'. But that *might* be OK if it doesn't exist, so proceed on";
     fi
 
     # Create a new "orphaned" branch -- we don't need history for
@@ -71,7 +69,7 @@ then
     git checkout --orphan $GH_PAGESBRANCH
 
     # Copy the built files to a tmp location
-    cp -R html _tmp
+    mv site_generator/html _tmp
 
     # This will delete all of the git-managed files here
     git rm -rf .

@@ -12,4 +12,4 @@ export CURRENT_BRANCH_NAME="$(git rev-parse HEAD)"
 export INTERACTIVE=false
 export GH_REMOTE=deploy
 export GH_PAGESBRANCH="gh-pages"  # remove this to get deployment on the "real branch"
-./deploy
+site_generator/deploy

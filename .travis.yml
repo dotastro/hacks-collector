@@ -11,7 +11,7 @@ script:
 
 deploy:
     provider: script
-    script: ./travis_deploy
+    script: site_generator/travis_deploy
     on:
         repo: dotastro/hack-list
         branch: master
