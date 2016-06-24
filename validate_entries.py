@@ -23,6 +23,7 @@ def check_link(url):
         return r.status_code == 200
 
 yaml_files = glob.glob('*/*.yml')
+yaml_files.remove('site_generator/events.yml')
 
 print("Processing {0} file(s)".format(len(yaml_files)))
 
