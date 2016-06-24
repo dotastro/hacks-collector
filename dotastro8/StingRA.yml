@@ -1,0 +1,11 @@
+title: StingRA - Simbad Quick-Look Chrome Extension
+creators:
+    - Hugh Osborn
+    - Jonathan Fay
+description: This is a chrome extension that enables astronomers to highlight an astronomical object and, by clicking on the stingray, open a quick-look pop-up of magnitudes, images, sky position and links to simbad and WWT.
+source-url: http://github.com/astrojonathan/StingRA
+live-url: https://chrome.google.com/webstore/detail/stingra/jopoiaekgcofgjjlmcckfnafbjpedeim
+doi: 
+images:
+    - ScreenShot_StingRA.png
+    - StingRA400px.png
