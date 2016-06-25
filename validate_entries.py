@@ -12,6 +12,9 @@ OPTIONAL = ('source-url', 'live-url', 'doi', 'images',
             'contact-email', 'contact-github', 'orcid')
 URLS = ('source-url', 'live-url')
 
+EVENTS_FILE = 'site_generator/events.yml'
+EVENTS_REQUIRED = ('id','venue','date')
+
 status = 0
 
 def check_link(url):
@@ -23,11 +26,32 @@ def check_link(url):
         return r.status_code == 200
 
 yaml_files = glob.glob('*/*.yml')
+yaml_files.remove(EVENTS_FILE)
 
 print("Processing {0} file(s)".format(len(yaml_files)))
 
 urls = []
 errors = []
+
+# Check the events YAML file validates
+try:
+    with open(EVENTS_FILE) as f:
+        events = yaml.load(f)
+except Exception:
+    errors.append("Failed to parse {0}".format(EVENTS_FILE))
+
+if events is None:
+    errors.append("Empty file: {0}".format(EVENTS_FILE))
+
+for value in events:
+    line = list(value.values())
+    # Check that required keywords are present
+    missing = []
+    for keyword in EVENTS_REQUIRED:
+        if not keyword in line[0]:
+            missing.append(keyword)
+    if missing:
+        errors.append("Missing keywords: {0}".format(", ".join(missing)))
 
 for yaml_file in yaml_files:
 
