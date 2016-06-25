@@ -9,6 +9,7 @@ import logging
 DATA_DIR_PATTERN = 'dotastro*'
 README_NAME = 'README.md'
 YAML_TEMPLATE = 'template.yml'
+EVENTS_FILE = 'site_generator/events.yml'
 
 OUTPUT_DIR = 'site_generator/html'
 
@@ -23,15 +24,21 @@ def runner():
             cleaned_data = collect_data(dirname, template_data)
             render_page_data(header, cleaned_data, dirname)
             pages.append(dirname)
-    make_index(pages)
+    make_index()
     return
 
-def make_index(pages):
+def parse_events_yml():
+    stream = open(EVENTS_FILE, 'r')
+    filedata = yaml.load(stream)
+    return filedata
+
+def make_index():
     if not os.path.isdir(OUTPUT_DIR):
         os.mkdir(OUTPUT_DIR)
     env = Environment(loader=TEMPLATE_LOADER)
     template = env.get_template('index.html')
-    output_from_parsed_template = template.render(pages=pages)
+    events = parse_events_yml()
+    output_from_parsed_template = template.render(events=events)
     with open(os.path.join(OUTPUT_DIR, "index.html"), "w") as fh:
         print('Writing out', fh.name)
         fh.write(output_from_parsed_template)

@@ -26,18 +26,22 @@
 <body>
   <div class="section">
     <div class="container">
-      <h1>.Astronomy Hacks Collector</h1>
       <img src="http://dotastronomy.com/wp-content/uploads/2013/01/dotlogo_black.png" alt="dotastro logo" />
+      <h1>.Astronomy Hacks Collector</h1>
+      {% block main %}
 
       <p>We have collated as many Hack Day projects from .Astronomy 2-7 that we could find. If you want to add your own project, follow the README instructions on <a href="https://github.com/dotastro/hack-list">Hack List GitHub repo</a>.</p>
 
       <p>See what hacks were done each year:</p>
       <ul>
-        {% for page in pages%}
-        <li><a href="{{ page }}.html">{{ page }}</li>
+        {% for event in events%}
+        {% for k, v in event.items() %}
+        <li><a href="{{ k }}.html">.Astronomy {{ v['id'] }}</a> - {{v.date}} - {{v.venue}}</li>
+        {% endfor %}
         {% endfor %}
       </ul>
       <p>Ps. You'll find this hack on listed in here for .Astronomy 8 very soon. Its all very Meta.</p>
+      {% endblock %}
     </div>
   </div>
 </body>
