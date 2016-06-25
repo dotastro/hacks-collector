@@ -1,33 +1,32 @@
-events:
-  dotastro1:
+- dotastro1:
     id: 1
-    date : September 22nd-24th 2008
+    date: September 22nd-24th 2008
     venue: Cardiff University
-  dotastro2:
+- dotastro2:
     id: 2
     date: November 30 – Dec 4, 2009
     venue: Lorentz Centre, Leiden
-  dotastro3:
+- dotastro3:
     id: 3
     venue: New College, Oxford
     date: April 4-8, 2011
-  dotastro4:
+- dotastro4:
     id: 4
     date: July 9-11, 2012
     venue: Haus der Astronomie and the International Wissenschaft Forum, Heidelberg
-  dotastro5:
+- dotastro5:
     id: 5
     date: September 16-18, 2013
     venue: New England Research & Development Center, Cambridge, Massachusetts
-  dotastro6:
+- dotastro6:
     id: 6
     date: December 8-10, 2014
     venue: Adler Planetarium, Chicago, Illinois, USA
-  dotastro7:
+- dotastro7:
     id: 7
     date: November 3-6, 2015
     venue: Justice & Police Museum, Sydney CBD, Australia
-  dotastro8:
+- dotastro8:
     id: 8
     date: 20th – 23rd June 2016
     venue: Pembroke College, Oxford, UK
