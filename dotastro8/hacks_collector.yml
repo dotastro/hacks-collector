@@ -1,0 +1,12 @@
+title: Hacks Collector
+creators:
+  - Erik Tollerud
+  - Daina Bouquin
+  - Tom Robitaille
+  - Edward Gomez
+  - Becky Smethurst
+  - Arna Karick
+description: >
+    A way to archive all hacks made at .Astronomy conferences. Each hack has a separate YML file containing all meta data. The YAML files are validated and we then auto-build a new version of the website with the new hack listed.
+source-url: http://github.com/dotastro/hack-list
+live-url: https://dotastro.github.io/hack-list/
