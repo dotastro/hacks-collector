@@ -1,0 +1,5 @@
+title: Are you still talking?
+creators:
+    - Edward Gomez
+description: Use a blink(1) light to control your speakers when you are chairing a session. This is a python package which installs a command line talk timer. By entering a total talk time and warning period, you will start the blink(1) light glowing green while they talking. It changes to orange when they are in the warning period, then red when their time is up. If they continue talking the light flashes a headache inducing light show until you control-C. 
+source-url: http://github.com/zemogle/session_chair
