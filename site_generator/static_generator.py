@@ -76,13 +76,13 @@ def parse_yaml_style(data,template):
         data['images'] = [data['images']]
     return data
 
-def render_page_data(header, pages, dirname):
+def render_page_data(header, data, dirname):
     data = dict()
     env = Environment(loader=TEMPLATE_LOADER)
     template = env.get_template('page.html')
     data['header'] = header
     data['event'] = dirname
-    data['pages'] = pages
+    data['hacks'] = data
     output_from_parsed_template = template.render(**data )
     output_from_parsed_template.replace("–", " ")
 
