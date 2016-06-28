@@ -6,7 +6,7 @@ which in turn contains one file for each hack. Adding a file to this repository
 is easy, and we describe the file format and the steps to take to add a file
 below.
 
-To see a prettified web site listing these hacks, check out https://dotastro.github.io/hack-list/.
+To see a prettified web site listing these hacks, check out https://dotastro.github.io/hacks-collector/.
 
 ## Submitting a hack the easy way
 
@@ -20,7 +20,7 @@ which you can modify later if desired (see the section on [Updating a hack](#upd
 ###Creating the file
 
 First navigate to the correct conference folder e.g.
-[dotastro8](https://github.com/dotastro/hack-list/tree/master/dotastro8),
+[dotastro8](https://github.com/dotastro/hacks-collector/tree/master/dotastro8),
 then click on the "Create new file" button on the top right side of the page.
 
 ![create-new-file-img](images/create-new-file.png)
@@ -39,7 +39,7 @@ Each hack should be described by a file that looks like this:
     doi: http://zenodo.org/1029812
     images: hack1.jpg
     
-This format is provided in the [template.yml](https://github.com/dotastro/hack-list/blob/master/template.yml) file in this repo. The file format is called YAML, but you don't need to worry if you don't know
+This format is provided in the [template.yml](https://github.com/dotastro/hacks-collector/blob/master/template.yml) file in this repo. The file format is called YAML, but you don't need to worry if you don't know
 this or how to submit the pull-request - we explain all the details below.
 
 The ``title``, ``creators``, and ``description`` fields are always required
@@ -108,7 +108,7 @@ Ta Da! Your hack is now archived for the joy of future generations!
 
 Whether you submit a hack via the web form or via GitHub, subsequent updates
 should be done via GitHub. Assuming that the hack entry you want to edit is
-inside the main [hack-list](http://github.com/dotastro/hack-list) repository,
+inside the main [hacks-collector](http://github.com/dotastro/hacks-collector) repository,
 navigate to the folder for the relevant .Astronomy meeting, then click on the
 file you want to edit. Once the contents of the file show, click on the pen
 icon in the upper right to edit the file:
