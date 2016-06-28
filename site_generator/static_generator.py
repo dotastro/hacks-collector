@@ -4,6 +4,8 @@ import glob
 import os
 from markdown2 import Markdown
 import logging
+import copy
+import shutil
 
 
 DATA_DIR_PATTERN = 'dotastro*'
@@ -21,8 +23,8 @@ def runner():
     for dirname in glob.glob(DATA_DIR_PATTERN):
         if os.path.isdir(dirname):
             header = render_markdown(os.path.join(dirname, README_NAME))
-            cleaned_data = collect_data(dirname, template_data)
-            render_page_data(header, cleaned_data, dirname)
+            hacks_data = collect_data(dirname, template_data)
+            render_page_data(header, hacks_data, dirname)
             pages.append(dirname)
     make_index()
     return
@@ -56,7 +58,7 @@ def collect_data(folder_name, template_data):
     for yfile in files:
         stream = open(yfile, 'r')
         filedata = yaml.load(stream)
-        cleaned_data = parse_yaml_style(filedata,template_data)
+        cleaned_data = parse_yaml_style(filedata, template_data)
         data.append(cleaned_data)
     return data
 
@@ -76,13 +78,14 @@ def parse_yaml_style(data,template):
         data['images'] = [data['images']]
     return data
 
-def render_page_data(header, pages, dirname):
+def render_page_data(header, hacks_data, dirname):
     data = dict()
     env = Environment(loader=TEMPLATE_LOADER)
     template = env.get_template('page.html')
     data['header'] = header
     data['event'] = dirname
-    data['pages'] = pages
+    data['hacks'], fromimgs, toimgs = reprocess_image_names(hacks_data, dirname)
+
     output_from_parsed_template = template.render(**data )
     output_from_parsed_template.replace("–", " ")
 
@@ -92,7 +95,31 @@ def render_page_data(header, pages, dirname):
     with open(os.path.join(OUTPUT_DIR, dirname) + ".html", "w") as fh:
         print('Writing out', fh.name)
         fh.write(output_from_parsed_template)
+
+    for fromimg, toimg in zip(fromimgs, toimgs):
+        toimg = os.path.join(OUTPUT_DIR, toimg)
+        print('Copying', fromimg, 'to', toimg)
+        shutil.copy(fromimg, toimg)
     return
+
+def reprocess_image_names(hacks_data, dirname):
+    newdata = []
+    fromcpys = []
+    tocpys = []
+    for hack in hacks_data:
+        newhack = copy.copy(hack)
+        newimages = []
+        for imgname in hack['images']:
+            if imgname.startswith('http'):
+                newimages.append(imgname)
+            elif imgname != '':
+                newimages.append('{}_{}'.format(dirname, imgname))
+            if imgname != '' and not imgname.startswith('http'):
+                fromcpys.append(os.path.join(dirname, imgname))
+                tocpys.append(newimages[-1])
+        newhack['images'] = newimages
+        newdata.append(newhack)
+    return newdata, fromcpys, tocpys
 
 
 if __name__ == '__main__':
