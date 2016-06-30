@@ -1,0 +1,12 @@
+
+title: SIMBAD the Bot
+creators: 
+    - Simon Murphy (@AstroSmurph)
+description: Twitter bot which tweets a multi-wavelength animated GIF of a random SIMBAD object a few times a day. Serendipitously explore the sky!
+source-url: https://github.com/simonmurphy/simbad-the-bot
+live-url: https://twitter.com/simbad_the_bot
+contact-email: 
+doi: 
+images: simbad-the-bot.png
+orcid: 
+    - 
