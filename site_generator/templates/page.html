@@ -1,11 +1,19 @@
 {% extends 'index.html'%}
 
-{% block main %}
-{{header}}
+{% block heading %}
+<h1>.Astronomy {{header.id}}</h1>
+<h3>{{header.date}}</h3>
+<p>{{header.venue}}</p>
+<p><strong>Organizers:</strong> {{header.loc}}</p>
+{% endblock %}
 
+{% block main_content %}
+{% if not hacks %}
+<h2>Sadly there were no hacks at this .Astro</h2>
+{% else %}
 <h2>Hack Day projects</h2>
 {% for data in hacks %}
-  <h2>{{data.title}}</h2>
+  <h3>{{data.title}}</h3>
   <p>{{data.description}}</p>
   <h3>Creators</h3>
   <ul>
@@ -14,7 +22,7 @@
   {% endfor %}
 </ul>
 
-<h3>Other Information</h3>
+<h4>Other Information</h4>
 <ul>
   {% if data['source-url'] %}
   <li><a href="{{data['source-url']}}">Go to source</a></li>
@@ -33,4 +41,5 @@
 
 <hr />
 {% endfor%}
+{% endif %}
 {% endblock %}

@@ -12,6 +12,7 @@ DATA_DIR_PATTERN = 'dotastro*'
 README_NAME = 'README.md'
 YAML_TEMPLATE = 'template.yml'
 EVENTS_FILE = 'site_generator/events.yml'
+LOGO_FILE = 'dotlogo_black.png'
 
 OUTPUT_DIR = 'site_generator/html'
 
@@ -20,9 +21,10 @@ TEMPLATE_LOADER = FileSystemLoader('site_generator/templates')
 def runner():
     pages = []
     template_data = load_yaml_style()
+    events = parse_events_yml()
     for dirname in glob.glob(DATA_DIR_PATTERN):
         if os.path.isdir(dirname):
-            header = render_markdown(os.path.join(dirname, README_NAME))
+            header = parse_header(events,dirname)
             hacks_data = collect_data(dirname, template_data)
             render_page_data(header, hacks_data, dirname)
             pages.append(dirname)
@@ -34,6 +36,12 @@ def parse_events_yml():
     filedata = yaml.load(stream)
     return filedata
 
+def parse_header(events, dirname):
+    dirname = dirname.split("/")[-1]
+    events_dict = dict([(key,d[key]) for d in events for key in d])
+    header = events_dict.get(dirname,None)
+    return header
+
 def make_index():
     if not os.path.isdir(OUTPUT_DIR):
         os.mkdir(OUTPUT_DIR)
@@ -44,13 +52,10 @@ def make_index():
     with open(os.path.join(OUTPUT_DIR, "index.html"), "w") as fh:
         print('Writing out', fh.name)
         fh.write(output_from_parsed_template)
-    return
+    # Copy logo to HTML folder_name
+    shutil.copy(os.path.join('images',LOGO_FILE), os.path.join(OUTPUT_DIR, LOGO_FILE))
 
-def render_markdown(readme):
-    readme_file = open(readme, 'r')
-    md = Markdown()
-    header = md.convert(readme_file.read())
-    return header
+    return
 
 def collect_data(folder_name, template_data):
     files = glob.glob(os.path.join(folder_name, "*.yml"))
@@ -82,6 +87,8 @@ def render_page_data(header, hacks_data, dirname):
     data = dict()
     env = Environment(loader=TEMPLATE_LOADER)
     template = env.get_template('page.html')
+    events = parse_events_yml()
+    data['events'] = events
     data['header'] = header
     data['event'] = dirname
     data['hacks'], fromimgs, toimgs = reprocess_image_names(hacks_data, dirname)
