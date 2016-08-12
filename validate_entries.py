@@ -96,18 +96,18 @@ for yaml_file in yaml_files:
                     urls.append(link)
 
 # Check links
-import multiprocessing
-p = multiprocessing.Pool(processes=10)
-print("Checking {0} link(s)".format(len(urls)))
-results = p.map(check_link, urls)
-failed = []
-for success, url in zip(results, urls):
-    if not success:
-        failed.append(url)
-if failed:
-    errors.append("Found broken links:")
-    for url in failed:
-        errors.append('- ' + url)
+# import multiprocessing
+# p = multiprocessing.Pool(processes=10)
+# print("Checking {0} link(s)".format(len(urls)))
+# results = p.map(check_link, urls)
+# failed = []
+# for success, url in zip(results, urls):
+#     if not success:
+#         failed.append(url)
+# if failed:
+#     errors.append("Found broken links:")
+#     for url in failed:
+#         errors.append('- ' + url)
 
 if errors:
     for error in errors:
