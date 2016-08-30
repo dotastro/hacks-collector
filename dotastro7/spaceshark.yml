@@ -1,10 +1,17 @@
 title: Space Shark
 creators: 
  - James Gilbert
- - Pascal Elahi 
- - Kieran Leschinski
  - Simon Mutch
  - Dany Vohl
+ - Pascal Elahi
+ - Kieran Leschinski
  - Kirsten Gottschalk
+orcid: 0000-0001-5065-2101
+contact-email: 4a4d47@gmail.com
+contact-github: labjg
 description: Alt-az pointer to be used for education
-images: https://twitter.com/labjg/status/662520713274789890
+source-url: http://github.com/spaceshark
+doi: 
+ - http://dx.doi.org/10.5281/zenodo.61081
+ - http://dx.doi.org/10.5281/zenodo.61082
+images: http://pbs.twimg.com/media/CTG_DcCUYAAP4na.jpg
