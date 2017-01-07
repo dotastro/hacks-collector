@@ -11,7 +11,7 @@ import shutil
 DATA_DIR_PATTERN = 'dotastro*'
 README_NAME = 'README.md'
 YAML_TEMPLATE = 'template.yml'
-EVENTS_FILE = 'site_generator/events.yml'
+EVENTS_FILE = 'events.yml'
 LOGO_FILE = 'dotlogo_black.png'
 
 OUTPUT_DIR = 'site_generator/html'
