@@ -38,7 +38,7 @@ promptifinteractive () {
 
 echo "*****************************************************************"
 echo "WARNING! This script will remove the local $GH_PAGESBRANCH branch,"
-echo "build the notebook files into HTML, then push to remote gh-pages"
+echo "build the hack list into a static site, then push to remote gh-pages"
 echo "located here: $GH_REMOTE/gh-pages."
 echo
 echo "Make sure you have no uncommitted changes in your current branch"
@@ -78,9 +78,7 @@ then
     cp -R _tmp/* .
     rm -rf _tmp
 
-    git add *.html
-    git add images
-    git add css
+    git add *
     git commit -m "Generated from sources"
 
     promptifinteractive "Would you like to preview the rendered HTML? [y/N] " N -n 1
