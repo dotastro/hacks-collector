@@ -12,7 +12,7 @@ OPTIONAL = ('source-url', 'live-url', 'doi', 'images',
             'contact-email', 'contact-github', 'orcid')
 URLS = ('source-url', 'live-url')
 
-EVENTS_FILE = 'site_generator/events.yml'
+EVENTS_FILE = 'events.yml'
 EVENTS_REQUIRED = ('id','venue','date')
 
 status = 0
@@ -26,7 +26,6 @@ def check_link(url):
         return r.status_code == 200
 
 yaml_files = glob.glob('*/*.yml')
-yaml_files.remove(EVENTS_FILE)
 
 print("Processing {0} file(s)".format(len(yaml_files)))
 
