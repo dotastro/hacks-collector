@@ -5,11 +5,18 @@
 # probably best to use an account that only has access to this specific repo, not
 # someone's personal token with general access to all of their stuff.
 
-echo "Adding deployment remote"
-git remote add deploy "https://${GH_TOKEN}@${GH_REF}"
+# decrypt the encrypted private key
+openssl aes-256-cbc -k "$DEPLOY_KEY_PW" -in site_generator/deploy_key.enc -out site_generator/deploy_key -d
 
+# set up git to push via SSH using the supplied deploy key
+eval "$(ssh-agent -s)" #start the ssh agent
+chmod 600 site_generator/deploy_key
+ssh-add site_generator/deploy_key
+git remote add deploy "git@github.com:$TRAVIS_REPO_SLUG.git"
+
+# configure and run the deploy script
 export CURRENT_BRANCH_NAME="$(git rev-parse HEAD)"
 export INTERACTIVE=false
 export GH_REMOTE=deploy
-export GH_PAGESBRANCH="gh-pages"  # remove this to get deployment on the "real branch"
+export GH_PAGESBRANCH="gh-pages"
 site_generator/deploy
