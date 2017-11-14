@@ -2,7 +2,7 @@
 
 ## 14-17th November 2017
 
-## Pembroke College, Oxford, UK
+## SAAO - Cape Town, South Africa
 
 **Local Organisers:** Steve Crawford, Kevin Govender, Carolina Ödman-Govender
 
