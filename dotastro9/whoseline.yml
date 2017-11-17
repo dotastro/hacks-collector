@@ -1,0 +1,12 @@
+title: Whose line is it anyway?
+creators:
+    - Brett Morris
+    - Nick Earl
+    - Adrianna Pińska
+    - Mike Walmsley
+    - Demitri Muna
+    - Becky Smethurst
+description: Have you ever plotted a 1D spectrum and wondered what a particular absorption/emission feature was? `whoseline` is a small package for plotting common spectral line lists on your spectra, so you can discover whose line is responsible for a particular absorption/emission line. 
+source-url: https://github.com/bmorris3/whoseline-vis/
+live-url: dotastro.muna.net:8000/
+doi: None
