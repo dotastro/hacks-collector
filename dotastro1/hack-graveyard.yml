@@ -1,14 +1,12 @@
-
 title: Hack Graveyard
-creators: 
+creators:
     - Will Armentrout
     - Arna Karick
     - Lisa Ballard
-description: "dotAstronomy is full of amazing pitches and amazing hacks. Unfortunately, we don't have enough hours in the "Hack Day" to complete all of our hacks. The "Hack Graveyard" keeps track of these hacks so they can be revived in the future!"
+description: 'dotAstronomy is full of amazing pitches and amazing hacks. Unfortunately, we do not have enough hours in the "Hack Day" to complete all of our hacks. The "Hack Graveyard" keeps track of these hacks so they can be revived in the future!'
 source-url: https://github.com/WillArmentrout/dotAstroGraveyard
 live-url: https://willarmentrout.github.io/dotAstroGraveyard/
-contact-email: wparmentrout@mix.wvu.edu
-doi: 
+contact-email:
+     - wparmentrout@mix.wvu.edu
 images: hack-graveyard.png
-orcid: 
-    - 
+
