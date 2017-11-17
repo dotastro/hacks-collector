@@ -4,11 +4,7 @@ creators:
     - Brigitta Sipocz
     - Fernando Becerra
     - Lisa Ballard
-description: > 
-  Have you ever wondered where you'd currently be in the Universe 
-  if you were launched towards the zenith above your birth place at the 
-  time you were born? Well we hacked a simple site to calculate your 
-  position in space and determine the nearest star to you and its distance. 
+description: "Have you ever wondered where you'd currently be in the Universe if you were launched towards the zenith above your birth place at the time you were born? Well we hacked a simple site to calculate your position in space and determine the nearest star to you and its distance." 
 source-url: https://github.com/bsipocz/where-in-the-universe
 live-url: https://where-in-the-universe.herokuapp.com/
 contact-github: @rjsmethurst 
