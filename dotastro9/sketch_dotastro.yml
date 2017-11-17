@@ -1,0 +1,9 @@
+title: Sketch dotAstro: hunting for Jupiter sketches in archival notebooks
+creators:
+    - Daina Bouquin
+    - Chris Lintott
+    - Teresa de Young
+description: Attempting to use computer vision to distinguish between boring pages in archival notebooks and pages with sketches of Jupiter.
+source-url: https://github.com/dbouquin/sketch_dotastro
+contact-github:
+    - dbouquin 
