@@ -1,21 +1,16 @@
 language: python
-
 python:
-  - 3.5
-
+- 3.5
 install:
-  - pip install six pyyaml requests markdown2 jinja2
-
+- pip install six pyyaml requests markdown2 jinja2
 script:
-  - python validate_entries.py
-
+- python validate_entries.py
 deploy:
-    provider: script
-    script: site_generator/travis_deploy
-    on:
-        repo: dotastro/hacks-collector
-        branch: master
-
+  provider: script
+  script: site_generator/travis_deploy
+  on:
+    repo: dotastro/hacks-collector
+    branch: master
 env:
-    global:
-        - secure: "l23IiIvcSudY8oLybxgR9RkWUYor1IYhOuVdKxUjfYrBjk55/7kNLETQudSMWGAXZ2mNhyhLdcAXQ57d6khAkjIAKFcxyMxSgvdr76xoUXeWa+T+ki6Y864QSylw1bdPtcxfA9RENZ4epdCi6QoJA7NTgr6awY08scfaC8Nosw0hf3p22+D/bUj6hRBwpmkwbBZjDXjW0GobAjJgwZHcpSKS81oWofLu+o2Nx2IJZENbbeBqSvLz2VZ+2cJVqCIQ2HcqSXvq4I30nRSxZpY/1cbbB9w2CPvalMvEsVfv/9Rp0fP4NcD/oiRaQ0v7fYskDOyYHE9bpb+Q0QJjlhQ+GgF9BY5UeDIKRW3mZW876J5ejqAu952YaAbAdgbA07HCh3izmipF3k4fB/1QMZUcHyt77yVqfHVtnqVWv0EWsSsdcgjsRkYp3wV70MrEvNKlSim4nZRLCjZKmAEyefPalCbzLWTQAXax0C43pp4Hea1HFl2uLawmEotkZSOtc1zPBPPVXf/sadiAgbZXummmoZyGOoyoXTTK7gCN3zZpCO57WWEIiSXG77UkSfyPo+lj/OY4OvnWpxsiSM5p2yUy89im95WgkAWhuLf0sYyTIX33YclbDp4CWlbwYKjTefRSwRpj8+8LbcidUopJJeAyaMEb3m2eYbLVlBQsOPvLASk="
+  global:
+    secure: BDpLg8IuU9pV5Yny0/HPYuTEgaLkrdhhg12I223r6MKS9sON94tICNyTD+qFb8kGTx7wTSAV2s00248z70FY+PaRCLCr6geXPj/pEdNyfYR2xwSmpmDypJJywpmWlkWj96jZZrHueRtfnNdR2dzkOdF9yy/mN1H9U++7Iw7/rcWexh6sNrnHAZDZh1VrrIJiPR1X6Cj64/6/oHTF1PJ6rSl6L3kjinZyRhBMvqH+KDZ+WqcojImwBnl3/NCtnrYguKqinlrwVUeiLok1RCqQ8BN03GmJiz8f1GAP+YHAzVB0B4logc8Ag/SqjMHmWMhdd4eoDFrvaSrZxyj3d5Dtu/leFnwAzQBjtDTdqDxb519YwExLsoqLagHk8ZB68VAdiTgeNcNAEwALbIQH+fLRRatEvpAsIIVT0yMPTiDPmWAzz7lnzj/RGTqbHcMjILn2Vg7tE+Fq0lEaPCyoe/BUIWaHYPUggoOX9ydS/xoCL2IUw3fCCeWWV4dr+RFeoJGkMX6h/ej7zrJ/A/R92otP+qgbSlSjCd83/rlE5scKOvwaZ76FGxEo4BmfYdpsegdsm0aOZFPrRp8RmVZbqLv1hiDFPSN7NS8A5lG4/A4F0q3kyiuyMwncyGEKvgY30DoQdfDdt8LB4Kcz/mPUSHaUMQy0BAqpl0GpFbnkBHkGoOc=
