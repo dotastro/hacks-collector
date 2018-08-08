@@ -78,6 +78,9 @@ then
     cp -R _tmp/* .
     rm -rf _tmp
 
+    # this is *critical* for security, as otherwise the deploy key gets checked into git and then sent up to the gh-pages branch
+    echo "deploy_key" >> .gitignore 
+
     git add *
     git commit -m "Generated from sources"
 
