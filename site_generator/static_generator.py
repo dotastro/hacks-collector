@@ -106,7 +106,10 @@ def render_page_data(header, hacks_data, dirname):
     for fromimg, toimg in zip(fromimgs, toimgs):
         toimg = os.path.join(OUTPUT_DIR, toimg)
         print('Copying', fromimg, 'to', toimg)
-        shutil.copy(fromimg, toimg)
+        try:
+            shutil.copy(fromimg, toimg)
+        except FileNotFoundError:
+            print("Did not find {}!  Skipping...".format(fromimg))
     return
 
 def reprocess_image_names(hacks_data, dirname):
