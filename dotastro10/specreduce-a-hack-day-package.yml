@@ -1,0 +1,15 @@
+
+title: Specreduce a hack day package
+creators: 
+    - Azalee Bostroem
+    - Mees Fix
+    - Iva Momcheva
+    - Laura Prichard
+description: "Advance the specreduce package: clean wavelength tables, convince function access to wavelength table, air to vacuum conversion, testing of the trace function "
+source-url: https://github.com/astropy/specreduce
+live-url: 
+contact-email: abostroem@gmail.com
+doi: 
+images: 
+orcid: 
+    - https://orcid.org/0000-0002-4924-444X
