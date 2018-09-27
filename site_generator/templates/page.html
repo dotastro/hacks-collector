@@ -4,7 +4,11 @@
 <h1>.Astronomy {{header.id}}</h1>
 <h3>{{header.date}}</h3>
 <p>{{header.venue}}</p>
+{% if header.logo %}
+<img src="{{header.logo}}" alt="Logo" width="100%">
+{% endif %}
 <p><strong>Organizers:</strong> {{header.loc}}</p>
+
 {% endblock %}
 
 {% block main_content %}

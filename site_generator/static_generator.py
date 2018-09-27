@@ -12,7 +12,8 @@ DATA_DIR_PATTERN = 'dotastro*'
 README_NAME = 'README.md'
 YAML_TEMPLATE = 'template.yml'
 EVENTS_FILE = 'events.yml'
-LOGO_FILE = 'dotlogo_black.png'
+LOGO_FILES = ['dotlogo_black.png',
+              'dotastrox_bannerlogo.png']
 
 OUTPUT_DIR = 'site_generator/html'
 
@@ -53,7 +54,8 @@ def make_index():
         print('Writing out', fh.name)
         fh.write(output_from_parsed_template)
     # Copy logo to HTML folder_name
-    shutil.copy(os.path.join('images',LOGO_FILE), os.path.join(OUTPUT_DIR, LOGO_FILE))
+    for fn in LOGO_FILES:
+        shutil.copy(os.path.join('images',fn), os.path.join(OUTPUT_DIR, fn))
 
     return
 
