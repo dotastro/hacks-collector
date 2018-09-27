@@ -6,6 +6,10 @@
 
 **Local Organisers:** Sarah Kendrew, Arfon Smith, Erik Tollerud, Joshua Peek, Ivelina Momcheva, Tom Donaldson, Susan Kassin
 
+
+
+![dotastroX](dotastrox_bannerlogo.png)
+
 MINING THE PAST, MAKING SPACE FOR THE FUTURE
 
 Astronomy is the science of the past and the future of the Universe. For the 10th edition of .Astronomy we will explore this duality of our science in all its guises: we push to build, innovate and explore to study at the same time our history and our future. We apply new technologies to data from past observations to generate new knowledge. The conference venue, the Space Telescope Science Institute in Baltimore, is a global centre for space astronomy: the hub of Hubble, and the home of its golden heir, the James Webb Space Telescope. STScI hosts MAST, the Mikulski Archive for Space Telescopes, which makes data available to the community from numerous other missions and projects, such as Kepler, TESS and Pan-STARRS. We’ll be incorporating the theme of space telescopes into our sessions.
