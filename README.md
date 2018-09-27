@@ -17,7 +17,7 @@ which you can modify later if desired (see the section on [Updating a hack](#upd
 
 ## Submitting a hack via GitHub
 
-###Creating the file
+### Creating the file
 
 First navigate to the correct conference folder e.g.
 [dotastro8](https://github.com/dotastro/hacks-collector/tree/master/dotastro8),
@@ -129,3 +129,17 @@ hack's source code by including the following markdown code:
     ![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
 
 ![badge-img](https://img.shields.io/badge/Made%20at-%23dotastro-brightgreen.svg)
+
+## Adding a new year
+
+If you are hosting the next .Astronomy and would like to get ahead of the game by 
+setting things up in advance... it's suggested you stop, because there's a proud
+tradition of getting all this done at the last moment (it's a great easy-to-accomplish 
+hack to just do this the day of).  But if you insist on being well-prepared, the process
+is:
+
+1. Add a new `dotastroNN` directory for this year's conference
+2. Add a `README.md` to that directory with the event's details (see previous ones for the format)
+3. Edit the `events.yml` to add in your new event's details (should be the same as the relevant parts of the README)
+4. `git add` both files, and `git commit`.  The `git push` to update the dotastro repository.
+5. Go to the hack list submission app (https://github.com/dotastro/hack-list-submission-app), and update the `hack_submission/templates/form-validation.html` by adding your year's number to the "Which dotAstronomy?" option list.  Be sure to change the default "selected" to your new one.
