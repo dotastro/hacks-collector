@@ -1,0 +1,12 @@
+
+title: Bokeh Hacking with FITS Images
+creators: 
+    - David Rodriguez
+description: "Working out how to use FITS images, catalog data, and observation footprints with Bokeh."
+source-url: https://github.com/dr-rodriguez/BokehHack
+live-url: https://dr-portal.herokuapp.com
+contact-email: strakul@gmail.com
+doi: 
+images: bokeh-hacking-with-fits-images.png
+orcid: 
+    - orcid.org/0000-0003-1286-5231
