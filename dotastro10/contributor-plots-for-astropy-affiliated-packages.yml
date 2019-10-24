@@ -1,0 +1,13 @@
+
+title: Contributor plots for astropy-affiliated packages
+creators: 
+    - Matthew Bourque
+    - Erik Tollerud
+description: "Code that uses GitHub REST API to plot the number of unique contributors over time for astopy-affiliated packages"
+source-url: https://github.com/astropy/astropy-procedures/pull/96
+live-url: 
+contact-email: bourque@stsci.edu
+doi: 
+images: 
+orcid: 
+    - 
