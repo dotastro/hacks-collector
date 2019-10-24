@@ -14,7 +14,7 @@ chmod 600 site_generator/deploy_key
 ssh-add site_generator/deploy_key
 git remote add deploy "git@github.com:$TRAVIS_REPO_SLUG.git"
 echo "SHOW"
-git remote show deploy
+echo $TRAVIS_REPO_SLUG
 
 # configure and run the deploy script
 export CURRENT_BRANCH_NAME="$(git rev-parse HEAD)"
