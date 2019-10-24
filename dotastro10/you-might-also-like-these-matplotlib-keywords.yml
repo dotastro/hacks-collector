@@ -1,0 +1,12 @@
+
+title: You Might Also Like These Matplotlib Keywords
+creators: 
+    - Benjamin Weiner
+description: "This hack reads a training set python file for plt.* matplotlib function calls, reads your file for matplotlib calls, and shows the most commonly used keywords for the functions you used."
+source-url: https://github.com/bjweiner/dotastro/tree/master/keyword_recommend
+live-url: 
+contact-email: bjweiner@gmail.com
+doi: http://zenodo.org/1029812
+images: 
+orcid: 
+    - https://orcid.org/0000-0001-6065-7483
