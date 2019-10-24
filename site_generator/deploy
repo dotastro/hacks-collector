@@ -95,12 +95,14 @@ then
 
     promptifinteractive "Are you sure you want to push to the remote branch '$GH_PAGESBRANCH' on the remote '$GH_REMOTE'? [y/N] " y -n 1
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        echo "OUTPUT from ls-remote"
-        git ls-remote --exit-code $GH_REMOTE
+        echo
+        git ls-remote --exit-code $GH_REMOTE > lsrem.out 2>&1
         while [[ $? != 0 ]]
         do
             promptifinteractive "Could not communicate with remote '$GH_REMOTE'.  Enter an alternate remote name (or 'quit' to give up):" quit
             if [[ $REPLY = "quit" ]]; then
+                echo "ls-remote output:"
+                cat lsrem.out
                 giveup_message
                 exit
             fi
