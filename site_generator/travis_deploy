@@ -3,10 +3,7 @@
 # Need to set up a environment variable DEPLOY_KEY_PW with the correct passphrase in travis
 
 # decrypt the encrypted private key
-openssl aes-256-cbc -k "$DEPLOY_KEY_PW" -in site_generator/deploy_key.enc -out site_generator/deploy_key -d
-
-echo "VERS"
-openssl version
+openssl aes-256-cbc -md sha256 -k "$DEPLOY_KEY_PW" -in site_generator/deploy_key.enc -out site_generator/deploy_key -d
 
 # set up git to push via SSH using the supplied deploy key
 eval "$(ssh-agent -s)" #start the ssh agent
